@@ -1,0 +1,17 @@
+<%= form_with model: product do |form| %>
+  <% if form.object.errors.any? %>
+    <p class="error"><%= form.object.errors.full_messages.first %></p>
+  <% end %>
+
+    <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.rich_textarea :description %>
+  </div>
+
+  <div>
+    <%= form.label %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
